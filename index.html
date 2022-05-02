@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="styles.css">
+  <script src="validar.js"></script>
 </head>
 <body>
      <div class="signupFrm">
@@ -41,16 +42,16 @@
              </div>
 
             <div class="inputContainer">
-              <input type="text" class="input" placeholder="a">
+              <input type="password" onchange="(validarpass)" id="pass1" class="input" placeholder="a">
               <label for="" class="label">Password</label>
             </div>
       
             <div class="inputContainer">
-              <input type="text" class="input" placeholder="a">
+              <input type="password" id="pass2" class="input" placeholder="a">
               <label for="" class="label">Confirm Password</label>
             </div>
       
-            <input type="submit" class="submitBtn" value="Sign up">
+            <input type="submit" class="submitBtn" value="Enviar">
           </form>
         </div>
 </body>
