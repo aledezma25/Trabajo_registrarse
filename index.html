@@ -67,7 +67,7 @@
         </div>
         <br />
         <div class="inputContainer">
-          <input type="text" class="input" id="nombre" placeholder="a" onclick="upperCaseAlert()"/>
+          <input type="text" class="input" id="nombre" placeholder="a" onchange="upperCaseAlert()"/>
           <label for="" class="label">Nombre</label>
         </div>
 
@@ -77,7 +77,7 @@
         </div>
 
         <div class="inputContainer">
-          <input type="text" class="input" id="email" placeholder="a" />
+          <input type="text" class="input" id="email" placeholder="a" onchange="emailEssay()"/>
           <label for="" class="label">Email</label>
         </div>
 
@@ -102,12 +102,13 @@
           <label for="" class="label">Confirm Password</label>
         </div>
 
-        <input
+        <button
           type="submit"
           class="submitBtn"
-          onclick="return enviarFormulario()"
-          value="Enviar"
-        />
+          id="boton"
+          onclick=""
+        >Enviar</button>
+
       </form>
     </div>
     <div id="error"></div>
