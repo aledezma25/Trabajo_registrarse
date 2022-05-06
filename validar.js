@@ -23,5 +23,15 @@ function upperCaseAlert(){
 
 function emailEssay()
 {
-    document.getElementById("boton").disabled = true;
+    let email = document.getElementById("email");
+    let boton = document.getElementById("boton");
+    boton.disabled = false;
+    email.addEventListener("change", stateHandle);
+    function stateHandle() {
+        if (document.getElementById("email").value != "") {
+            boton.disabled = false; 
+        } else {
+        boton.disabled = true;
+        }
+    }
 }
