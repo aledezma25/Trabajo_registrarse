@@ -107,3 +107,16 @@ body {
     font-size: 14px;
     font-weight: 600;
   }
+
+  .form-register-box {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-between;
+    
+  }
+
+  .form-checkbox {
+    display: none;
+  }
+

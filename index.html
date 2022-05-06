@@ -1,58 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="validar.js"></script>
-</head>
-<body>
-     <div class="signupFrm">
-          <form action="" class="form">
-            <h1 class="title">Registro</h1>
-            <n1>¿Se desea registrar?</n1><br>
-           <br> <div class="form-check">
-               <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-               <label class="form-check-label" for="flexRadioDefault1">
-                 Si
-               </label>
-             </div>
-             <div class="form-check">
-               <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
-               <label class="form-check-label" for="flexRadioDefault2">
-                 No
-               </label>
-             </div>
-             <br>
-            <div class="inputContainer">
-              <input type="text" class="input" placeholder="a">
-              <label for="" class="label">Nombre</label>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="signupFrm">
+      <form action="" class="form">
+        <h1 class="title">Registro</h1>
+        <n1>¿Se desea registrar?</n1><br />
+        <br />
+        <div class="form-register-box" id="form-register-box" >
+          <div class="main-form-check">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault1"
+                onclick="habilitar()"
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Si
+              </label>
             </div>
-            
-            <div class="inputContainer">
-               <input type="text" class="input" placeholder="a">
-               <label for="" class="label">Apellido</label>
-             </div>
-             
-             <div class="inputContainer">
-               <input type="text" class="input" placeholder="a">
-               <label for="" class="label">Email</label>
-             </div>
-
-            <div class="inputContainer">
-              <input type="password" onchange="(validarpass)" id="pass1" class="input" placeholder="a">
-              <label for="" class="label">Password</label>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="flexRadioDefault"
+                id="flexRadioDefault2"
+                onclick="habilitar()"
+              />
+              <label class="form-check-label" for="flexRadioDefault2">
+                No
+              </label>
             </div>
-      
-            <div class="inputContainer">
-              <input type="password" id="pass2" class="input" placeholder="a">
-              <label for="" class="label">Confirm Password</label>
+          </div>
+          <div class="form-checkbox" id="form-checkbox">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              />
+              <label class="form-check-label" for="flexCheckDefault">
+                Default checkbox
+              </label>
             </div>
-      
-            <input type="submit" class="submitBtn" value="Enviar">
-          </form>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckChecked"
+              />
+              <label class="form-check-label" for="flexCheckChecked">
+                Checked checkbox
+              </label>
+            </div>
+          </div>
         </div>
-</body>
+        <br />
+        <div class="inputContainer">
+          <input type="text" class="input" id="nombre" placeholder="a" onclick="upperCaseAlert()"/>
+          <label for="" class="label">Nombre</label>
+        </div>
+
+        <div class="inputContainer">
+          <input type="text" class="input" id="apellido" placeholder="a" />
+          <label for="" class="label">Apellido</label>
+        </div>
+
+        <div class="inputContainer">
+          <input type="text" class="input" id="email" placeholder="a" />
+          <label for="" class="label">Email</label>
+        </div>
+
+        <div class="inputContainer">
+          <input type="date" class="input" id="fecha" placeholder="a" />
+          <label for="" class="label">Fecha de nacimiento</label>
+        </div>
+
+        <div class="inputContainer">
+          <input
+            type="password"
+            onchange="(validarpass)"
+            id="pass1"
+            class="input"
+            placeholder="a"
+          />
+          <label for="" class="label">Password</label>
+        </div>
+
+        <div class="inputContainer">
+          <input type="password" id="pass2" class="input" placeholder="a" />
+          <label for="" class="label">Confirm Password</label>
+        </div>
+
+        <input
+          type="submit"
+          class="submitBtn"
+          onclick="return enviarFormulario()"
+          value="Enviar"
+        />
+      </form>
+    </div>
+    <div id="error"></div>
+
+    <script src="validar.js"></script>
+  </body>
 </html>
