@@ -89,19 +89,19 @@
         <div class="inputContainer">
           <input
             type="password"
-            onchange="(validarpass)"
             id="pass1"
             class="input"
-            placeholder="a"
-          />
+            placeholder="********"
+            pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[#?!@$%^&*-]).{8,11}$"
+            title="Debe contener mayusculas, minisculas, numeros y simbolos entre un rango de 8 a 11 caracteres" required/>
           <label for="" class="label">Password</label>
         </div>
-
         <div class="inputContainer">
-          <input type="password" id="pass2" class="input" placeholder="a" />
+          <input type="password" id="pass2" class="input" onchange="validatePass()" placeholder="********" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[#?!@$%^&*-]).{8,11}$" 
+          title="Debe contener mayusculas, minisculas, numeros y simbolos entre un rango de 8 a 11 caracteres " required/>
           <label for="" class="label">Confirm Password</label>
         </div>
-
+        <p id="mensaje"> </p>
         <button
           type="submit"
           class="submitBtn"
